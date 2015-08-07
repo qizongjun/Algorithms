@@ -5,6 +5,9 @@ package com.problems.cloneLList;
  * QUALCOMM Proprietary and Confidential/GTDR
  */
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class LinkListWithRandom {
     public Node head;
 
@@ -35,6 +38,27 @@ public class LinkListWithRandom {
         this.head = newNode;
     }
 
+    public LinkListWithRandom clone() {
+        Map<Node, Node> map = new HashMap<Node, Node>();
+        Node origCurr = this.head;
+        Node cloneCurr = null;
+        while (origCurr != null)
+        {
+            cloneCurr = new Node(origCurr.data);
+            map.put(origCurr, cloneCurr);
+            origCurr = origCurr.next;
+        }
 
+        origCurr = this.head;
+        while (origCurr != null)
+        {
+            cloneCurr = map.get(origCurr);
+            cloneCurr.next = map.get(origCurr.next);
+            cloneCurr.random = map.get(origCurr.random);
+            origCurr = origCurr.next;
+        }
+
+        return new LinkListWithRandom(map.get(this.head));
+    }
 
 }

@@ -24,6 +24,7 @@ public class Main {
 
         app.print();
 
-
+        System.out.println("Cloning...");
+        app.clone().print();
     }
 }
