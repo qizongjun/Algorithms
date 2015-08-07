@@ -1,4 +1,4 @@
-package com.problems.cloneLList;
+package com.problems.cloneLList.solutions.usingMap;
 
 /**
  * Created by zongjunq on 8/7/2015.
