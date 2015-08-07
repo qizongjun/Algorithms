@@ -15,11 +15,14 @@ public class LinkListWithRandom {
 
     public void print()
     {
-        Node cur = head;
-        while (cur != null)
+        Node temp = head;
+        while (temp != null)
         {
-            System.out.print(cur.data);
-            System.out.print(" --> ");
+            Node random = temp.random;
+            int randomData = (random != null)? random.data: -1;
+            System.out.println("Data = " + temp.data +
+                    ", Random data = "+ randomData);
+            temp = temp.next;
         }
 
         System.out.println("null");
@@ -27,16 +30,9 @@ public class LinkListWithRandom {
 
     public void push_front(int data)
     {
-        if (head == null)
-        {
-            head = new Node(data);
-        }
-        else
-        {
-            Node newNode = new Node(data);
-            newNode.next = head;
-            this.head = newNode;
-        }
+        Node newNode = new Node(data);
+        newNode.next = head;
+        this.head = newNode;
     }
 
 
