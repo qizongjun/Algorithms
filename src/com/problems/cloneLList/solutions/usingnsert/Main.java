@@ -1,4 +1,4 @@
-package com.problems.cloneLList.solutions.usingMap;
+package com.problems.cloneLList.solutions.usingnsert;
 
 import com.problems.cloneLList.solutions.Node;
 
@@ -7,7 +7,7 @@ import com.problems.cloneLList.solutions.Node;
  */
 public class Main {
     public static void main(String[] args) {
-        LinkListWithRandom app = new LinkListWithRandom(new Node(5));
+        LinkListWithInsert app = new LinkListWithInsert(new Node(5));
         app.push_front(4);
         app.push_front(3);
         app.push_front(2);
@@ -24,9 +24,10 @@ public class Main {
         app.head.next.next.next.next.random =
                 app.head.next;
 
-        app.print();
+        app.print(app.head);
 
         System.out.println("Cloning...");
-        app.clone().print();
+        app.cloneList();
+//        app.print(app.head);
     }
 }

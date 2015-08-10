@@ -1,4 +1,4 @@
-package com.problems.cloneLList.solutions.usingMap;/*
+package com.problems.cloneLList.solutions;/*
  * Copyright (c) 2010 QUALCOMM Incorporated.
  *           All Rights Reserved.
  * QUALCOMM Proprietary and Confidential/GTDR

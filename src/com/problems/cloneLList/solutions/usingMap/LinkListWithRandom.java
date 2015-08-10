@@ -8,6 +8,8 @@ package com.problems.cloneLList.solutions.usingMap;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.problems.cloneLList.solutions.Node;
+
 public class LinkListWithRandom {
     public Node head;
 
